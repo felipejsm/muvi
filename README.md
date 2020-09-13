@@ -3,7 +3,7 @@ Unapologetically simple movie API
 
 ### How To Run
 
-0.`git clone https://github.com/felipejsm/muvi.git` 
+0. `git clone https://github.com/felipejsm/muvi.git` 
 
 1. cd muvi
 
