@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.muvi</groupId>
 	<artifactId>muvi-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>muvi-api</name>
 	<description>Simple Movie Api</description>
 
