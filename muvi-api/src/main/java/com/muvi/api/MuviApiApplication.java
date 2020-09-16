@@ -12,9 +12,4 @@ public class MuviApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MuviApiApplication.class, args);
 	}
-
-	@GetMapping("/v1/muvie")
-	public String get() {
-		return "Dunkirk";
-	}
 }

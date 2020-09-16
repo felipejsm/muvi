@@ -1,8 +1,15 @@
 package com.muvi.api.gateways;
 
-import org.springframework.web.bind.annotation.RestController;
+import com.muvi.api.usecases.ProduceMovie;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController("/v1")
 public class MovieController {
-
+    @Autowired
+    private ProduceMovie produceMovie;
+    @PostMapping("/movies")
+    public void post(@RequestBody String movie) {
+        this.produceMovie.send(movie);
+    }
 }
