@@ -34,12 +34,12 @@ services:
     - 19000:9000
     environment:
       KAFKA_BROKERCONNECT: kafka:9092
-  networks:
-    broker-kafka:
-      driver: bridge
   web:
     build: .
     ports:
       - 8080:8080
     depends_on:
       - kafka
+networks:
+  broker-kafka:
+    driver: bridge
