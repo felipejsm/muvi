@@ -6,7 +6,7 @@ services:
     image: wurstmeister/zookeeper
   kafka:
     image: wurstmeister/kafka
-      container_name: 'kafka'
+    container_name: 'kafka'
     environment:
       JVM_OPTS: -Xmx1g -Xms1g -XX:MaxPermSize=1024m
       KAFKA_ADVERTISED_HOST_NAME: kafka
