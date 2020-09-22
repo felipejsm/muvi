@@ -1,5 +1,6 @@
 package com.muvi.api.usecases;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
@@ -11,11 +12,8 @@ import java.util.UUID;
 public class ProduceMovie {
     @Value("${movie.topic}")
     private String movieTopic;
+    @Autowired
     private KafkaTemplate kafkaTemplate;
-
-    public ProduceMovie(final KafkaTemplate kafkaTemplate) {
-        this.kafkaTemplate = kafkaTemplate;
-    }
 
     public void send(final @RequestBody String movie) {
         final String messageKey = UUID.randomUUID().toString();
